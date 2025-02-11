@@ -11,6 +11,12 @@ public class AfficheurLCD extends LiaisonSerie {
         super.configurerParametres(19200,8,0,1);
     }
 
+    public void EcrireAstier(){
+        super.ecrire((byte)0xA2);
+        super.ecrire("Astier".getBytes());
+        super.ecrire((byte)0x00);
+    }
+
 
     public ArrayList<String> listerLesPorts() {
         System.out.println("je passe");
