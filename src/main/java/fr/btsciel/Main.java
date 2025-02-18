@@ -1,6 +1,7 @@
 package fr.btsciel;
 
 
+import fr.btsciel.clavier.In;
 import jssc.SerialPortException;
 
 public class Main {
@@ -8,14 +9,11 @@ public class Main {
 
         AfficheurLCD af = new AfficheurLCD();
         af.listerLesPorts().forEach(System.out::println);
-
         af.conf("com3");
-
-
         af.effacer();
-        af.ecrireClavier();
+        af.ecrireCentre("AMALLA", (byte)0);
+
 
 
     }
-
 }
